@@ -7,31 +7,31 @@ Windows Service application, that sorts the files inserted inside directory.
 3. How to: Maintain this program
 
 ### 1. Get code and write own changes
-- Clone this repository, or download as .ZIP package. 
+- Clone this repository, or download as .ZIP package:
     - You can do this thru green button with text "<> Code" up here.
 - Open .sln with Visual Studio
-- As entry point of the code we have "Service1.cs". You can open it by clicking "switch to code view" if code is not visible. 
+- As entry point of the code we have "Service1.cs". You can open it by clicking "switch to code view" if code is not visible:
     - Function "OnStart()" is called when service becomes started. 
     - Function "OnStop()" is called when service becomes stopped. 
     - But the real code is inside "DoWork()" function that is called every configured period.
 
 ### 2. Install it
-- Update "Config" class.
+- Update "Config" class:
     - All 3 dictionaries must exist!
     - Decide what to do with underscore
     - Set per how many seconds the function should be called.
 - Switch inside Visual Studio the Configuration Manager option from "Debug" to "Release"
 - Build the project
 - Open project files
-- Go to "*ApplicationDirectory*\bin\Release" and there should be 3 files -> 
+- Go to "*ApplicationDirectory*\bin\Release" and there should be 3 files: 
     - .exe 
     - .config 
     - .pdb
 - Copy them to directory, that will serve as application directory (maybe C:\SortFiles).
-- To the same directory copy .bat scripts that I included inside repositoy
+- To the same directory copy .bat scripts that I included inside repositoy:
     - "Install_Bat\DeleteService_SortFiles.bat" 
     - "Install_Bat\InstallService_SortFiles.bat"
-- Update "InstallService_SortFiles.bat"
+- Update "InstallService_SortFiles.bat":
     - "binpath=" should lead to SortFiles.exe file (maybe C:\SortFiles\SortFiles.exe)
 - Run "InstallService_SortFiles.bat" as admin.
 - Done. You can inspect "Services" windows application, there should be "SortFiles" service already working.
