@@ -17,7 +17,7 @@ Windows Service application, that sorts the files inserted inside directory.
 
 ### 2. Install it
 - Update "Config" class:
-    - All 3 dictionaries must exist!
+    - All 3 directories must exist!
     - Decide what to do with underscore
     - Set per how many seconds the function should be called.
 - Switch inside Visual Studio the Configuration Manager option from "Debug" to "Release"
