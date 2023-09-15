@@ -16,6 +16,10 @@ Windows Service application, that sorts the files inserted inside directory.
     - But the real code is inside "DoWork()" function that is called every configured period.
 
 ### 2. Install it
+- Update "Config" class.
+    - All 3 dictionaries must exist!
+    - Decide what to do with underscore
+    - Set per how many seconds the function should be called.
 - Switch inside Visual Studio the Configuration Manager option from "Debug" to "Release"
 - Build the project
 - Open project files
